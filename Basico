@@ -1,0 +1,66 @@
+//Funciones
+//Una funcion es un conjunto de instrucciones para realizar una tarea
+    
+    
+fun main(){
+    
+    
+    suma ()
+    Resta()
+    condicional()
+    condicionalanidado()
+}
+
+
+
+fun suma (){
+    var numero1: Int = 8
+    var numero2: Int = 4
+    
+    
+    println("Suma = "+(numero1+numero2))
+}
+
+
+fun Resta(){
+    var numero1: Int = 40
+    var numero2:Int =50
+    
+    println("Resta =  "+(numero1 - numero2))
+}
+
+// condicionales if - else
+fun condicional(){
+    
+    
+    
+    var resultado = 12*12
+    
+    if (resultado > 20){
+        println("El resultado es mayor a 20 ")
+    }
+    else
+    {
+    println ("El resultado es menor a 20")  
+    }
+
+    //condicional anidado
+    
+}
+
+fun condicionalanidado(){
+    
+    var animal = "gato"
+    if (animal =="perro"){
+        println("Es un perro")
+    }
+    else if (animal == "gato"){
+        println("Es un gato")
+    }
+    
+    else if(animal == "loro")
+    println("Es un loro")
+    
+}
+    
+    
