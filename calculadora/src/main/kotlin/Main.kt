@@ -1,22 +1,29 @@
-import java.util.Scanner
-fun main(){
-    val input = Scanner(System.`in`)
-    print("Escribe el primer numero: ")
-    val primerNumero = input.nextInt()
-    print("Escribe el segundo numero: ")
-    val segundoNumero = input.nextInt()
-    print("Enter Action (+, -, *, /, %): ")
-    val choice  = input.next()[0]
-    val resultado  = when(choice){
-        '+' -> primerNumero  + segundoNumero
-        '-' -> primerNumero - segundoNumero
-        '*' -> primerNumero  * segundoNumero
-        '/' -> primerNumero / segundoNumero
-        '%' -> primerNumero  % segundoNumero
+import java.util.*
+
+fun main(args: Array<String>) {
+    val reader = Scanner(System.`in`)
+    print("Enter two numbers: ")
+
+    // nextDouble() reads the next double from the keyboard
+    val first = reader.nextDouble()
+    val second = reader.nextDouble()
+
+    print("Enter an operator (+, -, *, /): ")
+    val operator = reader.next()[0]
+
+    val result: Double
+
+    when (operator) {
+        '+' -> result = first + second
+        '-' -> result = first - second
+        '*' -> result = first * second
+        '/' -> result = first / second
+        // operator doesn't match any case constant (+, -, *, /)
         else -> {
-            System.err.println("Operacion no valida")
+            System.out.printf("Error! operator is not correct")
             return
         }
     }
-    print(resultado)
+
+    System.out.printf("%.1f %c %.1f = %.1f", first, operator, second, result)
 }
